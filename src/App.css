@@ -1,38 +1,50 @@
-.App {
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('./body_image.jpeg'); /* Use a relative path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Ensure the background stays fixed */
+}
+
+/* Container for the content */
+.app-container {
   text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Add margin to avoid sticking to edges */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Heading styling */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Paragraph styling */
+p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Button styling */
+.beta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button hover effect */
+.beta-button:hover {
+  background-color: #0056b3;
 }

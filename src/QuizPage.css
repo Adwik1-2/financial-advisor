@@ -1,0 +1,124 @@
+/* General styling */
+.quiz-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Question section */
+  .question-section {
+    margin-bottom: 30px;
+  }
+  
+  .question-section h2 {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .question-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+  }
+  
+  .option.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .next-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Result section */
+  .result-section {
+    margin-top: 20px;
+  }
+  
+  .result-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .result-section button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .result-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  .previous-scores {
+    margin-top: 20px;
+  }
+  
+  .previous-scores h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .previous-scores ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .previous-scores li {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
