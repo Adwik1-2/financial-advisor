@@ -1,66 +1,162 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Import Link
-import "./HomePage.css"; // Import the CSS file for styling
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 const HomePage = () => {
+  const [activeTab, setActiveTab] = useState("features");
+
+  const features = [
+    {
+      title: "AI-Powered Insights",
+      description: "Get personalized investment recommendations powered by our advanced AI algorithms.",
+      icon: "📊"
+    },
+    {
+      title: "Portfolio Tracking",
+      description: "Monitor all your investments in one place with real-time updates.",
+      icon: "📈"
+    },
+    {
+      title: "Risk Analysis",
+      description: "Understand your risk tolerance and get suitable investment options.",
+      icon: "🛡️"
+    },
+    {
+      title: "Market Trends",
+      description: "Stay updated with the latest market movements and trends.",
+      icon: "🌐"
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "This tool helped me optimize my portfolio and increase returns by 23% in just 6 months!",
+      author: "Sarah J., Investor"
+    },
+    {
+      quote: "Finally, a financial tool that speaks human language instead of Wall Street jargon.",
+      author: "Michael T., Small Business Owner"
+    },
+    {
+      quote: "The AI recommendations have been spot on for my retirement planning.",
+      author: "David L., Retiree"
+    }
+  ];
+
   return (
-    <div className="app-container">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="navbar-left">
-          <span className="logo">Port</span>
+    <div className="home-container">
+      {/* Navigation Bar */}
+      <nav className="main-nav">
+        <div className="nav-container">
+          <div className="logo">
+            <Link to="/">Port</Link>
+          </div>
           <ul className="nav-links">
-            <li><Link to="/QuizPage">Quiz</Link></li>
-            <li><Link to="/SavingsTracker">Savings Tracker</Link></li> {/* Updated Link */}
-            <li><Link to="/InvestmentCalculator">What-If</Link></li>
+            <li><Link to="/SavingsTracker">Savings Tracker</Link></li>
+            <li><Link to="/InvestmentCalculator">What-If Calculator</Link></li>
             <li><Link to="/investmentcomparison">Investment Comparison</Link></li>
-            <li><Link to="/GlossaryPage">Glossary</Link></li>
-            <li><Link to="/LoginPage">Login</Link></li>
+            <li><Link to="/QuizPage">Quiz</Link></li>
+            <li><Link to="/GlossaryPage">Financial Glossary</Link></li>
+            <li><Link to="/LoginPage" className="login-link">Login</Link></li>
           </ul>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <div className="hero-section">
-        <h1>GenAI powered Financial Assistant</h1>
-        <p>
-          This tool allows you to make better investing decisions.
-        </p>
-      </div>
-
-      {/* What We Offer Section */}
-      <div className="what-we-offer-section">
-        <h2>What We Offer</h2>
-        <div className="offer-list">
-          <div className="offer-item">
-            <h3>Variable rates based on utilization</h3>
-            <p>Our rates adjust dynamically based on market conditions.</p>
-          </div>
-          <div className="offer-item">
-            <h3>Cross Collateral Support</h3>
-            <p>Use multiple assets as collateral for your loans.</p>
-          </div>
-          <div className="offer-item">
-            <h3>Flash Loans</h3>
-            <p>Instant loans with no collateral required.</p>
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1>Your AI-Powered Financial Assistant</h1>
+          <p className="hero-subtitle">
+            Make smarter investment decisions with our intelligent financial platform that combines
+            cutting-edge AI with expert financial knowledge.
+          </p>
+          <div className="hero-cta">
+            <Link to="/Investmentcomparison" className="cta-button primary">
+              Get Started
+            </Link>
+            <Link to="/QuizPage" className="cta-button secondary">
+              Take Financial Quiz
+            </Link>
           </div>
         </div>
-      </div>
+        <div className="hero-image">
+          <div className="image-placeholder">
+            {/* In a real app, you would have an actual image here */}
+            <span>📈 Financial Dashboard Preview</span>
+          </div>
+        </div>
+      </section>
 
-      {/* About Us Section */}
-      <div className="about-us-section">
-        <h2>About Us</h2>
-        <p>
-          Port Finance is a lending protocol that aims to provide an entire suite of fixed income products.
-        </p>
-        <p>
-          Our services include variable rate lending, fixed rate lending, and interest rate swaps.
-        </p>
-        <p>
-          Our core contributors are a team of close-knit engineers with backgrounds from Google, Facebook, and Microsoft.
-        </p>
-        <button className="learn-more-button">Learn More...</button>
-      </div>
+      {/* Features Section */}
+      <section className="features-section">
+        <div className="section-header">
+          <h2>Why Choose Our Platform</h2>
+          <p>We combine financial expertise with artificial intelligence to give you an edge</p>
+        </div>
+        <div className="features-grid">
+          {features.map((feature, index) => (
+            <div key={index} className="feature-card">
+              <div className="feature-icon">{feature.icon}</div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tabs Section */}
+      <section className="tabs-section">
+        <div className="tabs-header">
+          <button
+            className={`tab-button ${activeTab === "features" ? "active" : ""}`}
+            onClick={() => setActiveTab("features")}
+          >
+            Key Features
+          </button>
+          <button
+            className={`tab-button ${activeTab === "testimonials" ? "active" : ""}`}
+            onClick={() => setActiveTab("testimonials")}
+          >
+            User Testimonials
+          </button>
+        </div>
+        <div className="tabs-content">
+          {activeTab === "features" ? (
+            <div className="features-list">
+              <ul>
+                <li>AI-driven investment recommendations</li>
+                <li>Real-time portfolio tracking</li>
+                <li>Customizable financial dashboards</li>
+                <li>Risk assessment tools</li>
+                <li>Educational resources</li>
+                <li>Tax optimization strategies</li>
+              </ul>
+            </div>
+          ) : (
+            <div className="testimonials-list">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="testimonial-card">
+                  <p className="quote">"{testimonial.quote}"</p>
+                  <p className="author">- {testimonial.author}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="cta-section">
+        <h2>Ready to Take Control of Your Financial Future?</h2>
+        <div className="cta-buttons">
+          <Link to="/LoginPage" className="cta-button primary">
+            Sign Up Now
+          </Link>
+          <Link to="/GlossaryPage" className="cta-button secondary">
+            Learn Financial Terms
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };
