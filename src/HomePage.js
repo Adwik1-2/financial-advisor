@@ -12,7 +12,7 @@ const HomePage = () => {
           <ul className="nav-links">
             <li><Link to="/QuizPage">Quiz</Link></li>
             <li><Link to="/SavingsTracker">Savings Tracker</Link></li> {/* Updated Link */}
-            <li><Link to="/investmentcomparison">Investment Comparison</Link></li>
+            <li><Link to="/InvestmentCalculator">Investment Comparison</Link></li>
             <li><Link to="/whatif">What-If</Link></li>
             <li><Link to="/glossary">Glossary</Link></li>
             <li><Link to="/login">Login</Link></li>
