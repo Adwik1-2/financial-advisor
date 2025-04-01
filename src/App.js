@@ -6,6 +6,7 @@ import SavingsTracker from './SavingsTracker';
 import QuizPage from './QuizPage';
 import InvestmentCalculator from './InvestmentCalculator';
 import GlossaryPage from './GlossaryPage';
+import LoginPage from './LoginPage';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/QuizPage" element={<QuizPage />} />
           <Route path="/InvestmentCalculator" element={<InvestmentCalculator />} />
           <Route path="/GlossaryPage" element={<GlossaryPage />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
         </Routes>
       </div>
     </Router>
