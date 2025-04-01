@@ -1,0 +1,50 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('./body_image.jpeg'); /* Use a relative path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Ensure the background stays fixed */
+}
+
+/* Container for the content */
+.app-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Add margin to avoid sticking to edges */
+}
+
+/* Heading styling */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.beta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.beta-button:hover {
+  background-color: #0056b3;
+}
