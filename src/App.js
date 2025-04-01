@@ -5,6 +5,7 @@ import HomePage from './HomePage'; // Import the HomePage component
 import SavingsTracker from './SavingsTracker';
 import QuizPage from './QuizPage';
 import InvestmentCalculator from './InvestmentCalculator';
+import GlossaryPage from './GlossaryPage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/SavingsTracker" element={<SavingsTracker />} />
           <Route path="/QuizPage" element={<QuizPage />} />
           <Route path="/InvestmentCalculator" element={<InvestmentCalculator />} />
+          <Route path="/GlossaryPage" element={<GlossaryPage />} />
         </Routes>
       </div>
     </Router>
