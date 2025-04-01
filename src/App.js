@@ -4,6 +4,7 @@ import './App.css'; // Import the CSS file for styling
 import HomePage from './HomePage'; // Import the HomePage component
 import SavingsTracker from './SavingsTracker';
 import QuizPage from './QuizPage';
+import InvestmentCalculator from './InvestmentCalculator';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/SavingsTracker" element={<SavingsTracker />} />
           <Route path="/QuizPage" element={<QuizPage />} />
+          <Route path="/InvestmentCalculator" element={<InvestmentCalculator />} />
         </Routes>
       </div>
     </Router>
