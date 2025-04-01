@@ -15,7 +15,7 @@ const HomePage = () => {
             <li><Link to="/InvestmentCalculator">What-If</Link></li>
             <li><Link to="/investmentcomparison">Investment Comparison</Link></li>
             <li><Link to="/GlossaryPage">Glossary</Link></li>
-            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/LoginPage">Login</Link></li>
           </ul>
         </div>
       </nav>
