@@ -9,7 +9,6 @@ const QuizPage = () => {
   const [showResult, setShowResult] = useState(false);
   const [previousScores, setPreviousScores] = useState([]);
 
-  // Sample quiz questions
   const quizQuestions = [
     {
       question: "What is the primary purpose of a budget?",
